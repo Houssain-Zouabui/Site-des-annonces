@@ -1,0 +1,64 @@
+<div *ngIf="annonce$ | async as annonce; else errorTemplate" class="container mt-4" style="padding-top: 100px;padding-bottom: 100px; color: blueviolet;">
+	<div class="card shadow-lg">
+	  <div class="card-header bg-primary text-white">
+		<h2>{{ annonce.titre }}</h2>
+	  </div>
+	  <div class="card-body">
+		<div class="row">
+		  <div class="col-md-4">
+			<img [src]="annonce.image" class="img-fluid rounded" alt="Image de l'annonce">
+		  </div>
+		  <div class="col-md-8">
+			<p><strong>Description:</strong> {{ annonce.description }}</p>
+			<p><strong>Prix:</strong> {{ annonce.prix | currency }}</p>
+			<button 
+			  type="button" 
+			  class="btn btn-primary mt-3" 
+			  (click)="openModal(annonce.userCoords, annonce)">
+			  Voir Détails
+			</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+  <ng-template #errorTemplate>
+	<div class="alert alert-danger mt-4" role="alert">
+	  Erreur lors du chargement de l'annonce.
+	</div>
+  </ng-template>
+  
+  <ng-template #errorTemplate>
+	<div class="container mt-4">
+	  <p><script>alert("Vous devez être connecté pour voir cette annonce")</script></p>
+	  <p>Veuillez vous connecter pour afficher les détails de l'annonce.</p>
+	</div>
+  </ng-template>
+  
+  <ng-template #loginPrompt>
+	<div class="container mt-4">
+	  <p>Veuillez vous connecter pour afficher les détails du créateur de l'annonce.</p>
+	  <!-- Ajoutez ici votre formulaire de connexion ou de modal de connexion -->
+	</div>
+  </ng-template>
+  
+  <ng-template #detailModal let-modal>
+	<div class="modal-header">
+	  <h4 class="modal-title">Détails du Créateur</h4>
+	  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+		<span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<div class="modal-body" *ngIf="annonce$ | async as annonce">
+	  <p><strong>Nom:</strong> {{ annonce.userCoords?.fullname }}</p>  
+	  <p><strong>Email:</strong> {{ annonce.userCoords?.email }}</p>
+	  <p><strong>Téléphone:</strong> {{ annonce.userCoords?.telephone}}</p>
+	  <p><strong>Adresse:</strong> {{ annonce.userCoords?.address }}</p>
+	  <p><strong>Sexe:</strong> {{ annonce.userCoords?.sexe }}</p>
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Fermer</button>
+	</div>
+  </ng-template>
+  

@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h1>Search Results</h1>
+  
+    <div *ngIf="filteredAnnonces.length === 0">
+      <p>No announcements found matching "{{ searchTerm }}".</p>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let annonce of filteredAnnonces">
+        <div class="card mb-3">
+          <img [src]="annonce.image" class="card-img-top" alt="Image of the announcement">
+          <div class="card-body">
+            <h5 class="card-title">{{ annonce.titre }}</h5>
+            <p class="card-text">{{ annonce.description | slice:0:100 }}...</p>
+            <a [routerLink]="['/annonce', annonce.id]" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

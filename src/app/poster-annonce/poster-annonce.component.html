@@ -1,0 +1,42 @@
+
+
+  <div class="container">
+    <div class="title">Post Ads</div>
+    <div class="content">
+      <div *ngIf="isLoggedIn$ | async; else notLoggedIn">
+        <form (ngSubmit)="onSubmit()" [formGroup]="annonceForm">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Titre de l'annonce</span>
+            <input formControlName="titre" type="text" placeholder="Entrez le titre de l'annonce" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Description</span>
+            <textarea formControlName="description" placeholder="Entrez la description de l'annonce" required></textarea>
+          </div>
+          <div class="input-box">
+            <span class="details">Image</span>
+            <input type="file" (change)="onFileChange($event)" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Prix</span>
+            <input formControlName="prix" type="number" placeholder="Entrez le prix" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Catégorie</span>
+            <select formControlName="categoryId" required>
+              <option value="">Sélectionnez une catégorie</option>
+              <option *ngFor="let category of categories" [value]="category.id">{{ category.nom }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Sauvegarder">
+        </div>
+      </form>
+      
+      </div></div>
+    </div>
+    <ng-template #notLoggedIn>
+      <p>You must be logged in to create an ad.</p>
+    </ng-template>

@@ -1,0 +1,19 @@
+.read_bt1 {
+    width: 35%;
+    float: left;
+}
+.read_bt1 a{
+    width: 100%;
+    float: left;
+    margin-bottom: 100px;
+    background-color: #fff;
+    color: #0e0e10;
+    font-size: 17pt;
+    border-radius: 5px;
+    padding: 10px 0px;
+    text-align: center;
+}
+.read_bt1 a:hover{
+    background-color: #0e0e10;
+    color: #fff;
+}

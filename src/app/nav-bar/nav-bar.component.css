@@ -1,0 +1,159 @@
+.header_section{
+	width: 100%; 
+	float: left;
+     background-image: url(../../assets/images/banner.png);
+     height: auto;  
+     background-size: 100%;
+     background-repeat: no-repeat;
+       position: fixed; /* Fixe la navbar en haut de la fenêtre */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+nav.main-menu {
+    float: left;
+    margin-left: 0;
+    padding-top: 40px;
+}
+
+.main-menu ul {
+    margin: 0;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.main-menu li {
+    position: inherit;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 30px;
+    font-size: 16pt;
+    color: #060608;
+}
+.search_main {
+    width: 20%;
+    float: right;
+    text-align: right;
+}
+
+.bg-light {
+    background-color: #ffffff!important;
+}
+.nav-link {
+    padding-right: 17px;
+    padding-left: 17px;
+    color: #ffffff;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: #000;
+}
+.nav-link:focus, .nav-link:hover {
+    color: #000;
+}
+.nav-lin{
+  margin-right: 60px;
+  
+  color: #fff;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+.nav-lin:hover{
+  color: #000;
+}
+.read_bt{
+  width: 200px;
+
+  
+}
+
+.login_text {
+    font-size: 14pt;
+    color: #060608;
+    display: none;
+}
+
+
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .input-search{
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: #000000;
+    padding-right: 60px;
+    color:#fff;
+  }
+  .input-search::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  
+
+
+.form-select {
+  width: 240px;
+  appearance: none; /* Pour supprimer l'apparence par défaut du système */
+  -webkit-appearance: none; /* Pour les anciennes versions de WebKit */
+  -moz-appearance: none; /* Pour les anciennes versions de Firefox */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  color: #000000;
+}
+
+/* Hover et focus styles */
+.form-select:hover {
+  background-color: #000000;
+  color: #fff;
+}

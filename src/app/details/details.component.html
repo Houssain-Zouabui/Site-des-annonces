@@ -1,0 +1,26 @@
+<p>details works!</p>
+<section class="product">
+	<div class="product__photo">
+	  <div class="photo-container">
+		<div class="photo-main">
+		  <img [src]="annonce.image" width="100%" alt="Photo de l'annonce">
+		</div>
+	  </div>
+	</div>
+	<div class="product__info" *ngIf="annonce$ | async as annonce">
+	  <div class="title">
+		<h1>{{ annonce.titre }}</h1>
+		<span>{{ annonce.description }}</span>
+	  </div>
+	  <div class="price">
+		$ <span>{{ annonce.prix }}</span>
+	  </div>
+	  <div class="description">
+		<h3>Description</h3>
+		<p>{{ annonce.details }}</p>
+	  </div>
+	</div>
+	<button class="buy--btn" style="width: 50%;">Afficher les informations du client</button>
+	<!-- Affichage des informations du client si elles sont disponibles -->
+  </section>
+  

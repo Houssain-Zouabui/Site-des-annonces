@@ -1,0 +1,221 @@
+	<!-- header section start -->
+	<div class="header_section">
+		<div class="container-fluid">
+		</div>
+	<!-- header section end -->
+	<!-- banner section start -->
+	<div class="layout_padding banner_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<h1 class="banner_taital">All You Need </h1>
+                    <h1 class="banner_taital_1">Classified Ads</h1>
+					<p class="browse_text"></p>
+					<div class="banner_bt">
+						<div class="read_bt1"><a href="contact.html">Contact</a></div>
+					</div>
+				</div>
+                <div class="col-sm-4">
+                    <div class="video_icon"><img src="assets/images/promotion.png" style="width: 210px;"></div>
+                </div>
+			</div>
+            <div class="fashion_menu">
+				
+				  
+				  
+				  
+            </div>
+		</div>
+	</div>
+	<!-- banner section end -->
+    </div>
+	<!-- section promoted start -->
+	<div class=" layout_padding promoted_section">
+		<div class="container">
+			<h1 class="promoted_text"><span>Latest announcements</span></h1>
+			<p class="lorem_ipsum_text">Check out the Featured Ads!</p>
+
+			
+			
+			<section id="gallery">
+				<div class="container">
+				  <div class="row">
+					<!-- Carte d'annonce -->
+					<div class="col-lg-4 mb-4" *ngFor="let annonce of annonces">
+					  <div class="card">
+						<!-- Image de l'annonce -->
+						<img [src]="annonce.image" alt="{{annonce.titre}}" class="card-img-top">
+						<div class="card-body">
+						  <!-- Titre de l'annonce -->
+						  <h5 class="card-title">{{ annonce.titre }}</h5>
+						  <!-- Description de l'annonce -->
+						  <p class="card-text">{{ annonce.description }}</p>
+						  <!-- Prix de l'annonce -->
+						  <strong class="card-text" style="color: red;">{{ annonce.prix }}$</strong><br><br>
+						  <!-- Date de l'annonce avec icône -->
+						  <strong class="card-text">{{ annonce.date }}</strong>
+						  <i class="far fa-calendar-alt" style="font-size: 23px;"></i><br><br>
+						  <!-- Boutons d'action -->
+						  <a [routerLink]="['/annonce', annonce.id]" class="btn btn-outline-primary btn-sm">Read More</a>
+						  <a href="#" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </section>
+			  
+
+		</div>
+	</div>
+	<!-- section promoted end -->
+	<!-- section popular stores start -->
+    <div class="layout_padding popular_section">
+    	<div class="container">
+    		<h1 class="popular_taital">ADS CATEGORIES</h1>
+            <p class="lorem_ipsum_text">Check out your category!</p>
+            <div class="popular_section2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="video_main">
+                            <div class="play_icon" style="width: 100%;"><a href="#"><img src="assets/images/brand.png" style="width: 50%;"></a></div>
+                        </div><br><br>
+                        <div class="video_main">
+                            <div class="play_icon"><a href="#"><img src="assets/images/pets.png" style="width: 50%;"></a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="video_main_2">
+                            <div class="play_icon_2"><a href="#"><img src="assets/images/gadgets.png" style="width: 30%;"></a></div>
+							<div class="play_icon_2"><a href="#"><img src="assets/images/dumbbell.png" style="width: 30%;"></a></div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="video_main">
+                            <div class="play_icon"><a href="#"><img src="assets/images/car.png" style="width: 50%;"></a></div>
+                        </div>
+                        <div class="video_main">
+                            <div class="play_icon"><a href="#"><img src="assets/images/businessman.png" style="width: 50%;"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- section POPULAR STORES end -->
+	<!-- about section start -->
+    <div class="layout_padding about_section">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-12">
+    				<h1 class="about_taital">About Our Classified ads</h1>
+    				<p class="lorem_text">With videoads, find the right deal on the reference site for classifieds from individual to individual and professionals. With millions of classifieds, find the right opportunity in our categories cars, jobs, clothing, electronics, pets, sport and much more. Place a free ad with ease to sell, search, donate your second-hand goods or promote your services. Buy safely</p>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+	<!-- about section end -->
+	<!-- client section start -->
+    <div class="layout_padding clients_section">
+    	<div class="container">
+    		<div id="client_slide" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#client_slide" data-slide-to="0" class="active"></li>
+    <li data-target="#client_slide" data-slide-to="1"></li>
+    <li data-target="#client_slide" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+    			<div class="col-sm-12">
+    				<h1 class="promoted_text">CLIENTS REVIEW</h1>
+    				<div class="client_img"><img src="assets/images/client-img.png"></div>
+    				<h1 class="client_text">JHON DUE</h1>
+    				<p class="adiser_text">(adiser)</p>
+    				<p class="long_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+    			</div>
+    		</div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+    			<div class="col-sm-12">
+    				<h1 class="promoted_text">CLIENTS REVIEW</h1>
+    				<div class="client_img"><img src="assets/images/salwa.jpeg"></div>
+    				<h1 class="client_text">JHON DUE</h1>
+    				<p class="adiser_text">(adiser)</p>
+    				<p class="long_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+    			</div>
+    		</div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+    			<div class="col-sm-12">
+    				<h1 class="promoted_text">CLIENTS REVIEW</h1>
+    				<div class="client_img"><img src="assets/images/client-img.png"></div>
+    				<h1 class="client_text">JHON DUE</h1>
+    				<p class="adiser_text">(adiser)</p>
+    				<p class="long_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+    			</div>
+    		</div>
+        </div>
+    </div>
+    </div>
+    </div>	
+    </div>
+	<!-- client section end -->
+	<!-- contact section start -->
+	<div class=" layout_padding promoted_section">
+		<div class="container">
+			<h1 class="promoted_text"><span>CONTACT US</span></h1> 
+    <div class="contact_section">
+    	<div class="container-fluid padding_0">
+            <div class="map_section">
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="600" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
+                    <div class="input_main" style="margin-top: 7%;">
+                       <div class="container">
+						<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+							<div class="row">
+							  <div class="col-md-6">
+								<div class="form-group">
+								  <label class="label" for="name" ><h5>Full Name</h5></label>
+								  <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+								</div>
+							  </div>
+							  <div class="col-md-6"> 
+								<div class="form-group">
+								  <label class="label" for="email"><h5>Email Address</h5></label>
+								  <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+								</div>
+							  </div>
+							  <div class="col-md-12">
+								<div class="form-group">
+								  <label class="label" for="subject"><h5>Subject</h5></label>
+								  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+								</div>
+							  </div>
+							  <div class="col-md-12">
+								<div class="form-group">
+								  <label class="label" for="#"><h5>Message</h5></label>
+								  <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+								</div>
+							  </div>
+							  <div class="col-md-12">
+								<div class="form-group">
+								  <input type="submit" value="Send Message" class="btn btn-primary">
+								  <div class="submitting"></div>
+								</div>
+							  </div>
+							</div>
+						  </form>
+                       </div> 
+					   </div>
+				</div>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+
+	<!-- contact section end -->
